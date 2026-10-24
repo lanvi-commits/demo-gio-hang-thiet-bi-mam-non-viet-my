@@ -540,6 +540,10 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
    Đặt SAU woocommerce-cart.css + woocommerce-product-card.css. Màu, cỡ dùng lại của theme.
    ===================================================================== */
 
+/* Khoảng trắng khối tiêu đề (feedback 24/10, ảnh snipboard q7jt2U): đệm trên/dưới 60 → 32px ở ≥768px
+   (breadcrumb → H1 còn 48px như trang Danh sách báo giá); mobile theme đã 24/16px, giữ nguyên */
+@media (min-width: 768px) { .page-cart .cart-hero { padding: 32px 0; } }
+
 /* Thường mua kèm (dòng 217): dòng vừa thêm vào giỏ loé viền đỏ 1 lần để khách thấy giỏ đã đổi */
 .custom-cart-page .cart-item.is-just-added { animation: thc-row-added 1.6s ease-out; }
 @keyframes thc-row-added { 0%, 35% { box-shadow: 0 0 0 2px var(--primary_color, #d71010); } 100% { box-shadow: 0 0 0 1px #dcdfe4; } }
